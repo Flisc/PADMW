@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="inputName" type="id" />
+    <item name="inputEmail" type="id" />
+    <item name="inputPass" type="id" />
+    <item name="buttonRegister" type="id" />
+    <item name="alreadyLogin" type="id" />
+    <item name="showPass" type="id" />
+</resources>
