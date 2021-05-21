@@ -75,6 +75,7 @@ public class MovieRepository {
     public void insert(Movie movie) {
         new insertMovieAsyncTask(movieDao).execute(movie);
     }
+
     public void deleteFav(String id)  {new deleteFavMovieAsyncTask().execute(id);}
 
 
@@ -177,12 +178,6 @@ public  void ApiRepository(){
         }
     }
     private class deleteFavMovieAsyncTask extends AsyncTask<String, Void, Void> {
-
-//        private MovieDao movieDao;
-//
-//        private deleteFavMovieAsyncTask(MovieDao movieDao) {
-//            this.movieDao = movieDao;
-//        }
 
         @Override
         protected Void doInBackground(String... strings) {

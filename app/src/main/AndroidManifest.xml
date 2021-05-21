@@ -14,18 +14,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyMovies"
         android:usesCleartextTraffic="true">
-        <activity android:name=".user.Register"></activity>
-        <activity android:name=".user.Login">
+        <activity android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".user.ProfileActivity" />
-        <activity android:name=".FavMoviesActivity" />
-        <activity android:name=".MovieDetailsActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".user.Register" />
+        <activity
+            android:name=".user.Login"
+            android:theme="@style/Theme.MyMovies">
+        </activity>
+        <activity
+            android:name=".user.ProfileActivity"
+            android:theme="@style/Theme.MyMovies" />
+        <activity
+            android:name=".FavMoviesActivity"
+            android:theme="@style/Theme.MyMovies" />
+        <activity
+            android:name=".MovieDetailsActivity"
+            android:theme="@style/Theme.MyMovies" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.MyMovies" />
     </application>
 
 </manifest>

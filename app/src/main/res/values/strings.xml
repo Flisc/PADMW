@@ -15,6 +15,6 @@
     <string name="logout">Logout</string>
     <string name="passwordd">Password :</string>
     <string name="your_email">Your Email :</string>
-    <string name="space" >" "</string>
+    <string name="space">" "</string>
 
 </resources>
