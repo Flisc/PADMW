@@ -16,5 +16,6 @@
     <string name="passwordd">Password :</string>
     <string name="your_email">Your Email :</string>
     <string name="space">" "</string>
+    <string name="search_title">title_movie</string>
 
 </resources>

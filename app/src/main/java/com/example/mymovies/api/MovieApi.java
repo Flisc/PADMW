@@ -14,6 +14,11 @@ public interface MovieApi {
     @GET("?apikey=b650d11e&s=\"the\"&y=2019&type=movie&page=2")
     Call<JsonSearch> getPopularMovies();
 
-  @GET("?apikey=b650d11e")
+    @GET("?apikey=b650d11e")
     Call<MovieDetailed> getMovie(@Query("i") String id);
+
+    @GET("?apikey=b650d11e")
+    Call<JsonSearch> searchMovie(@Query("s") String s);
+    @GET("?apikey=b650d11e")
+    Call<JsonSearch> searchMoviePage(@Query("s") String s,@Query("page") int page);
 }

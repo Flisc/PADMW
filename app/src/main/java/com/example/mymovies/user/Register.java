@@ -41,15 +41,15 @@ public class Register extends AppCompatActivity {
         registerBtn = findViewById(R.id.buttonRegister);
         login = findViewById(R.id.alreadyLogin);
         firebaseAuth = FirebaseAuth.getInstance();
-        if(firebaseAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
-            Toast.makeText(Register.this,"Already logged in, please sign out",Toast.LENGTH_SHORT).show();
+        if (firebaseAuth.getCurrentUser() != null) {
+            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            Toast.makeText(Register.this, "Already logged in, please sign out", Toast.LENGTH_SHORT).show();
             finish();
         }
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(internetConnectionStatus.checkInternet(Register.this)) {
+                if (internetConnectionStatus.checkInternet(Register.this)) {
                     String inputEmail = email.getText().toString().trim();
                     String inputPass = password.getText().toString().trim();
                     if (TextUtils.isEmpty(inputEmail)) {
@@ -67,9 +67,9 @@ public class Register extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 Toast.makeText(Register.this, "User Added", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
-                                intent.putExtra("email",inputEmail);
-                                intent.putExtra("pass",inputPass);
+                                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                                intent.putExtra("email", inputEmail);
+                                intent.putExtra("pass", inputPass);
                                 startActivity(intent);
 
                             } else {
@@ -78,8 +78,8 @@ public class Register extends AppCompatActivity {
                             }
                         }
                     });
-                }else{
-                    Snackbar.make(v,"You dont have internet",Snackbar.LENGTH_LONG).setAction("Go offline",new loginOfflineListener()).show();
+                } else {
+                    Snackbar.make(v, "You dont have internet", Snackbar.LENGTH_LONG).setAction("Go offline", new loginOfflineListener()).show();
                 }
                 //
             }
@@ -88,10 +88,11 @@ public class Register extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Login.class));
+                startActivity(new Intent(getApplicationContext(), Login.class));
             }
         });
     }
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));

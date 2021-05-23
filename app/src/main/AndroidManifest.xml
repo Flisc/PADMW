@@ -14,7 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyMovies"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SplashActivity"
+        <activity android:name=".activities.SearchActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+            <!-- meta tag and intent filter go into results activity -->
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SplashActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,19 +39,28 @@
         <activity
             android:name=".user.Login"
             android:theme="@style/Theme.MyMovies">
+
         </activity>
         <activity
             android:name=".user.ProfileActivity"
             android:theme="@style/Theme.MyMovies" />
         <activity
-            android:name=".FavMoviesActivity"
+            android:name=".activities.FavMoviesActivity"
             android:theme="@style/Theme.MyMovies" />
         <activity
-            android:name=".MovieDetailsActivity"
+            android:name=".activities.MovieDetailsActivity"
             android:theme="@style/Theme.MyMovies" />
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.MyMovies" />
+            android:name=".activities.MainActivity"
+            android:theme="@style/Theme.MyMovies"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"
+                android:value=".SearchActivity"/>
+
+
+        </activity>
     </application>
 
 </manifest>

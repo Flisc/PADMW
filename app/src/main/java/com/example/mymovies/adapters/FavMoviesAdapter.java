@@ -12,7 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.mymovies.MovieDetailsActivity;
+import com.bumptech.glide.request.RequestOptions;
+import com.example.mymovies.activities.MovieDetailsActivity;
 import com.example.mymovies.R;
 import com.example.mymovies.data.FavMovie;
 
@@ -45,8 +46,11 @@ public class FavMoviesAdapter extends RecyclerView.Adapter<FavMoviesAdapter.FavM
 
       holder.fav_movies_title.setText(all_fav_movies.get(position).getTitle());
       holder.fav_movies_year.setText(all_fav_movies.get(position).getYear());
-
+    RequestOptions requestOptions = new RequestOptions();
+    requestOptions.placeholder(R.drawable.placeholder);
+    requestOptions.error(R.drawable.placeholder);
     Glide.with(context)
+            .setDefaultRequestOptions(requestOptions)
          .load(all_fav_movies.get(position).getPoster())
          .into(holder.poster);
   }
@@ -64,7 +68,7 @@ public class FavMoviesAdapter extends RecyclerView.Adapter<FavMoviesAdapter.FavM
 
     public FavMoviesViewHolder(@NonNull View itemView) {
       super(itemView);
-     poster = itemView.findViewById(R.id.fav_movie_poster);
+     poster = itemView.findViewById(R.id.search_movie_poster);
       fav_movies_title = itemView.findViewById(R.id.fav_movie_title);
       fav_movies_year = itemView.findViewById(R.id.fav_movie_year);
 

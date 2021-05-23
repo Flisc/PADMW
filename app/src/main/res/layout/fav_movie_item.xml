@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="@drawable/textinput_bg"
+    android:background="@drawable/border_white"
     android:padding="10dp">
 
     <ImageView
-        android:id="@+id/fav_movie_poster"
+        android:id="@+id/search_movie_poster"
         android:layout_width="130dp"
         android:layout_height="148dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,10 +30,10 @@
         android:layout_marginTop="16dp"
         android:text="TextView"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/fav_movie_poster"
+        app:layout_constraintStart_toEndOf="@+id/search_movie_poster"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingPrefix" />
 
@@ -50,7 +50,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/fav_movie_poster"
+        app:layout_constraintStart_toEndOf="@+id/search_movie_poster"
         app:layout_constraintTop_toBottomOf="@+id/fav_movie_title"
         tools:ignore="MissingPrefix" />
 </androidx.constraintlayout.widget.ConstraintLayout>

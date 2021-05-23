@@ -1,12 +1,8 @@
 package com.example.mymovies.network;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.widget.Toast;
-
-import com.example.mymovies.MovieDetailsActivity;
 
 public  class internetConnectionStatus {
 

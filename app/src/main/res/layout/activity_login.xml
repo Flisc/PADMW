@@ -11,31 +11,31 @@
 
     <TextView
         android:id="@+id/titleLogin"
-        android:layout_width="174dp"
-        android:layout_height="48dp"
+        fontPath="fonts/RobotoMono-Italic.ttf"
+        android:layout_width="199dp"
+        android:layout_height="59dp"
         android:layout_marginTop="84dp"
+        android:gravity="center"
         android:text="@string/login"
         android:textColor="@color/white"
-        android:textSize="36sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        fontPath="fonts/RobotoMono-Italic.ttf"
-        tools:ignore="MissingPrefix"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingPrefix" />
 
     <EditText
         android:id="@+id/loginEmail"
+        fontPath="fonts/RobotoMono-Regular.ttf"
         android:layout_width="303dp"
-        android:layout_height="39dp"
+        android:layout_height="51dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        fontPath="fonts/RobotoMono-Regular.ttf"
-        tools:ignore="MissingPrefix"
         android:background="@drawable/textinput_bg"
         android:ems="10"
         android:hint="@string/example_something_com"
@@ -46,16 +46,17 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColorHint="#C1FFFFFF"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/titleLogin"
+        tools:ignore="MissingPrefix" />
 
     <EditText
         android:id="@+id/loginPassword"
-        android:layout_width="306dp"
-        android:layout_height="39dp"
         fontPath="fonts/RobotoMono-Regular.ttf"
-        tools:ignore="MissingPrefix"
+        android:layout_width="312dp"
+        android:layout_height="53dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
@@ -72,16 +73,18 @@
         android:paddingBottom="10dp"
         android:textColorHint="#CBF4F4F4"
         android:textColorLink="#FFFFFF"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail"
+        tools:ignore="MissingPrefix" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/textinput_bg"
         android:text="@string/login"
         android:textColor="#FAFFFFFF"
@@ -102,7 +105,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661" />
+        app:layout_constraintVertical_bias="0.684" />
 
     <TextView
         android:id="@+id/questionAccountTextView"
@@ -115,9 +118,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.604"
+        app:layout_constraintVertical_bias="0.62"
         tools:ignore="MissingPrefix" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

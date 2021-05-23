@@ -74,7 +74,7 @@ public class Login extends AppCompatActivity {
                                 intent.putExtra("pass",inputPassword);
                                 startActivity(intent);
                             } else {
-                                Toast.makeText(Login.this, "Login error ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Email or passsword wrong ", Toast.LENGTH_SHORT).show();
 
                             }
                         }
