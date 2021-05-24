@@ -1,11 +1,13 @@
 package com.example.mymovies.data;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.Ignore;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
-@Entity(tableName = "movies")
+@Entity(tableName = "movies", indices = {@Index("id"),@Index(value = "imdbId",unique = true)})
 public class Movie {
 
     @PrimaryKey(autoGenerate = true)
@@ -15,6 +17,7 @@ public class Movie {
     private String title;
     @SerializedName("Year")
     private String year;
+    @NonNull
     @SerializedName("imdbID")
     private String imdbId;
     @SerializedName("Type")
@@ -22,8 +25,10 @@ public class Movie {
     @SerializedName("Poster")
     private String poster;
 
-    public Movie() {  }
-@Ignore
+    public Movie() {
+    }
+
+    @Ignore
     public Movie(String title, String year, String imdbId, String type, String poster) {
         this.title = title;
         this.year = year;
@@ -31,9 +36,11 @@ public class Movie {
         this.type = type;
         this.poster = poster;
     }
+
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }

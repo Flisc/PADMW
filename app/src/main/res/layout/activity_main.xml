@@ -31,8 +31,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="130dp"
-                android:layout_marginRight="130dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginRight="120dp"
                 android:background="@drawable/textinput_bg"
                 android:gravity="left"
                 android:padding="5dp"
@@ -48,7 +48,7 @@
 
                 <TextView
                     android:id="@+id/textView3"
-                    android:layout_width="72dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginLeft="5dp"

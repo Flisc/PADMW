@@ -29,7 +29,7 @@ public abstract class MovieDataBase extends RoomDatabase {
             synchronized (MovieDataBase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            MovieDataBase.class, "movie_database11")
+                            MovieDataBase.class, "movie_database10")
                             .addCallback(callback)
                             .build();
                 }

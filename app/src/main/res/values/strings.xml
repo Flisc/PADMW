@@ -11,7 +11,7 @@
     <string name="password">password</string>
     <string name="create_one_here">Create One Here !</string>
     <string name="you_don_t_have_an_account">You don\'t have an account ?</string>
-    <string name="go_to_your_movie_app"><![CDATA[Go to your Movie App ->]]></string>
+    <string name="go_to_your_movie_app"><![CDATA[Go to your Movie App]]></string>
     <string name="logout">Logout</string>
     <string name="passwordd">Password :</string>
     <string name="your_email">Your Email :</string>

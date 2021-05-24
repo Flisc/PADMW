@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "dcda4d20d8b1b001580ce4e5d44351f6",
+    "identityHash": "69d4f70a1187c631e982c2c3d9903f09",
     "entities": [
       {
         "tableName": "movies",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT, `year` TEXT, `imdbId` TEXT, `type` TEXT, `poster` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT, `year` TEXT, `imdbId` TEXT NOT NULL, `type` TEXT, `poster` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -30,7 +30,7 @@
             "fieldPath": "imdbId",
             "columnName": "imdbId",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "type",
@@ -51,7 +51,24 @@
           ],
           "autoGenerate": true
         },
-        "indices": [],
+        "indices": [
+          {
+            "name": "index_movies_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_movies_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_movies_imdbId",
+            "unique": true,
+            "columnNames": [
+              "imdbId"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_movies_imdbId` ON `${TABLE_NAME}` (`imdbId`)"
+          }
+        ],
         "foreignKeys": []
       },
       {
@@ -206,7 +223,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'dcda4d20d8b1b001580ce4e5d44351f6')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '69d4f70a1187c631e982c2c3d9903f09')"
     ]
   }
 }
