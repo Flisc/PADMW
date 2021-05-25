@@ -25,7 +25,6 @@ import com.example.mymovies.adapters.MovieListAdapter;
 import com.example.mymovies.data.Movie;
 import com.example.mymovies.network.internetConnectionStatus;
 import com.example.mymovies.roomEntities.MovieViewModel;
-import com.example.mymovies.user.ProfileActivity;
 
 import java.util.List;
 
@@ -46,12 +45,9 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
 
         inflater.inflate(R.menu.menu_item, menu);
-            searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.search));
-        // Associate searchable configuration with the SearchView
+        searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.search));
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-//        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setSearchableInfo(searchManager.getSearchableInfo(new ComponentName(this, SearchActivity.class)));
-//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         return true;
     }
 
@@ -61,13 +57,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        ViewPump.init(ViewPump.builder()
-//                .addInterceptor(new CalligraphyInterceptor(
-//                        new CalligraphyConfig.Builder()
-//                                .setDefaultFontPath("fonts/RobotoMono-Regular.ttf")
-//                                .setFontAttrId(R.attr.fontPath)
-//                                .build()))
-//                .build());
 
         recyclerViewUpcoming = findViewById(R.id.upcomingMovies);
         recyclerViewPopular = findViewById(R.id.popularMovies);

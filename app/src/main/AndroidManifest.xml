@@ -14,14 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyMovies"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.SearchActivity"
+        <activity android:name=".activities.editProfileActivity"></activity>
+        <activity
+            android:name=".activities.SearchActivity"
             android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
             <!-- meta tag and intent filter go into results activity -->
-            <meta-data android:name="android.app.searchable"
+            <meta-data
+                android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
+
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -38,11 +42,9 @@
         <activity android:name=".user.Register" />
         <activity
             android:name=".user.Login"
-            android:theme="@style/Theme.MyMovies">
-
-        </activity>
+            android:theme="@style/Theme.MyMovies"></activity>
         <activity
-            android:name=".user.ProfileActivity"
+            android:name=".activities.ProfileActivity"
             android:theme="@style/Theme.MyMovies" />
         <activity
             android:name=".activities.FavMoviesActivity"
@@ -52,14 +54,12 @@
             android:theme="@style/Theme.MyMovies" />
         <activity
             android:name=".activities.MainActivity"
-            android:theme="@style/Theme.MyMovies"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.MyMovies">
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable"
-                android:value=".SearchActivity"/>
-
-
+                android:value=".SearchActivity" />
         </activity>
     </application>
 

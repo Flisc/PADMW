@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mymovies.R;
+import com.example.mymovies.activities.ProfileActivity;
 import com.example.mymovies.listener.loginOfflineListener;
 import com.example.mymovies.network.internetConnectionStatus;
 import com.google.android.gms.tasks.OnCompleteListener;

@@ -26,8 +26,8 @@ public interface MovieDao {
     @Query("SELECT * FROM movies WHERE year = 2019")
     LiveData<List<Movie>> getPopularMovies();
 
-    @Query("select * from movies where imdbID = :id")
-    Movie getMovieById(String id);
+//    @Query("select * from movies where imdbID = :id")
+//    Movie getMovieById(String id);
 
     @Query("SELECT * FROM fav_movies")
     LiveData<List<FavMovie>> getAllFavMovies();

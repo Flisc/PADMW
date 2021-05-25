@@ -27,7 +27,7 @@
         tools:ignore="MissingPrefix" />
 
     <EditText
-        android:id="@+id/loginEmail"
+        android:id="@+id/updateEmail"
         fontPath="fonts/RobotoMono-Regular.ttf"
         android:layout_width="303dp"
         android:layout_height="51dp"
@@ -53,7 +53,7 @@
         tools:ignore="MissingPrefix" />
 
     <EditText
-        android:id="@+id/loginPassword"
+        android:id="@+id/updatePass"
         fontPath="fonts/RobotoMono-Regular.ttf"
         android:layout_width="312dp"
         android:layout_height="53dp"
@@ -77,11 +77,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmail"
+        app:layout_constraintTop_toBottomOf="@+id/updateEmail"
         tools:ignore="MissingPrefix" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/saveEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -91,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/updatePass" />
 
     <TextView
         android:id="@+id/newAccount"

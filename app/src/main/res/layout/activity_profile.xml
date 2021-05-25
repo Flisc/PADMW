@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editBtn"
     fontPath="fonts/RobotoMono-Regular.ttf"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_endless_constellation"
     android:padding="5dp"
     android:scrollbarThumbHorizontal="@drawable/textinput_bg"
-    tools:context=".user.ProfileActivity"
+    tools:context=".activities.ProfileActivity"
     tools:ignore="MissingPrefix">
 
     <ImageView
@@ -41,13 +42,14 @@
         fontPath="fonts/RobotoMono-Regular.ttf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="76dp"
         android:background="@drawable/border_white"
         android:padding="10dp"
         android:text="@string/go_to_your_movie_app"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingPrefix" />
 
@@ -63,18 +65,18 @@
         android:textOn="@string/space"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editPass"
+        app:layout_constraintTop_toTopOf="@+id/updatePass"
         app:layout_constraintVertical_bias="0.0" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="44dp"
         android:text="Dark Mode"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -82,7 +84,7 @@
         android:id="@+id/editEmail"
         android:layout_width="374dp"
         android:layout_height="49dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/border_white"
         android:ems="10"
         android:inputType="textPersonName"
@@ -90,12 +92,12 @@
         android:text="Email :"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
     <EditText
-        android:id="@+id/editPass"
+        android:id="@+id/updatePass"
         android:layout_width="376dp"
         android:layout_height="45dp"
         android:layout_marginTop="55dp"
@@ -109,5 +111,16 @@
         app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="332dp"
+        android:layout_marginLeft="332dp"
+        android:layout_marginBottom="348dp"
+        android:background="@drawable/ic_baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

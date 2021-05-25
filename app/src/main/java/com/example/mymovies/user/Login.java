@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mymovies.R;
-import com.example.mymovies.listener.FavListListener;
+import com.example.mymovies.activities.ProfileActivity;
 import com.example.mymovies.listener.loginOfflineListener;
 import com.example.mymovies.network.internetConnectionStatus;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -43,9 +43,9 @@ public class Login extends AppCompatActivity {
                                 .setFontAttrId(R.attr.fontPath)
                                 .build()))
                 .build());
-        password = findViewById(R.id.loginPassword);
-        email = findViewById(R.id.loginEmail);
-        btnLogin = findViewById(R.id.btnLogin);
+        password = findViewById(R.id.updatePass);
+        email = findViewById(R.id.updateEmail);
+        btnLogin = findViewById(R.id.saveEdit);
         createAccount = findViewById(R.id.newAccount);
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -70,7 +70,7 @@ public class Login extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 Toast.makeText(Login.this, "Login success", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
                                 intent.putExtra("email",inputEmail);
                                 intent.putExtra("pass",inputPassword);
                                 startActivity(intent);
