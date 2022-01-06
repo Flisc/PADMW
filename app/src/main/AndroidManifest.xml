@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mymovies">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyMovies"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.editProfileActivity"></activity>
+        <activity
+            android:name=".activities.SearchActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+            <!-- meta tag and intent filter go into results activity -->
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".user.Register" />
+        <activity
+            android:name=".user.Login"
+            android:theme="@style/Theme.MyMovies"></activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:theme="@style/Theme.MyMovies" />
+        <activity
+            android:name=".activities.FavMoviesActivity"
+            android:theme="@style/Theme.MyMovies" />
+        <activity
+            android:name=".activities.MovieDetailsActivity"
+            android:theme="@style/Theme.MyMovies" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.MyMovies">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"
+                android:value=".SearchActivity" />
+        </activity>
+    </application>
+
+</manifest>

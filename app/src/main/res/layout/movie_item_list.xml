@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_margin="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="115dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:id="@+id/movie_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:id="@+id/title_movie"
+        fontPath="fonts/RobotoMono-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#DF030304"
+        android:padding="5dp"
+        android:text="Title"
+        android:textColor="#ffffff"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/year_movie"
+        fontPath="fonts/RobotoMono-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:padding="5dp"
+        android:text="2019"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        tools:ignore="MissingPrefix" />
+
+
+</LinearLayout>

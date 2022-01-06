@@ -1,0 +1,229 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "69d4f70a1187c631e982c2c3d9903f09",
+    "entities": [
+      {
+        "tableName": "movies",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT, `year` TEXT, `imdbId` TEXT NOT NULL, `type` TEXT, `poster` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "year",
+            "columnName": "year",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imdbId",
+            "columnName": "imdbId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "poster",
+            "columnName": "poster",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_movies_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_movies_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_movies_imdbId",
+            "unique": true,
+            "columnNames": [
+              "imdbId"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_movies_imdbId` ON `${TABLE_NAME}` (`imdbId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "movieDetailed",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT, `year` TEXT, `imdbId` TEXT, `type` TEXT, `poster` TEXT, `released` TEXT, `genre` TEXT, `director` TEXT, `actors` TEXT, `plot` TEXT, `language` TEXT, `runtime` TEXT, `rating` REAL NOT NULL, `production` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "year",
+            "columnName": "year",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imdbId",
+            "columnName": "imdbId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "poster",
+            "columnName": "poster",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "released",
+            "columnName": "released",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "genre",
+            "columnName": "genre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "director",
+            "columnName": "director",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "actors",
+            "columnName": "actors",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "plot",
+            "columnName": "plot",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "language",
+            "columnName": "language",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "runtime",
+            "columnName": "runtime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "production",
+            "columnName": "production",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "fav_movies",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT, `year` TEXT, `poster` TEXT, `imdbID` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "year",
+            "columnName": "year",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "poster",
+            "columnName": "poster",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imdbID",
+            "columnName": "imdbID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '69d4f70a1187c631e982c2c3d9903f09')"
+    ]
+  }
+}

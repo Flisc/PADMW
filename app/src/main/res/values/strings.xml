@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyMovies</string>
+    <string name="upcoming_movies"> </string>
+    <string name="register_account">Register Account</string>
+    <string name="your_name">Your Name</string>
+    <string name="example_something_com">example@something.com</string>
+    <string name="login_here">Login Here !</string>
+    <string name="register">register</string>
+    <string name="you_have_an_account">You have an account?</string>
+    <string name="login">Login</string>
+    <string name="password">password</string>
+    <string name="create_one_here">Create One Here !</string>
+    <string name="you_don_t_have_an_account">You don\'t have an account ?</string>
+    <string name="go_to_your_movie_app"><![CDATA[Go to your Movie App]]></string>
+    <string name="logout">Logout</string>
+    <string name="passwordd">Password :</string>
+    <string name="your_email">Your Email :</string>
+    <string name="space">" "</string>
+    <string name="search_title">title_movie</string>
+
+</resources>
